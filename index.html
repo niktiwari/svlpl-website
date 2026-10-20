@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shree Vinayaka Logistics | FTL Transportation, Ahmedabad</title>
+<meta name="description" content="Shree Vinayaka Logistics – Ahmedabad based Full Truck Load (FTL) transportation across India. Delivering Trust with Every Load.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0c1f5c; --navy-d:#071440; --orange:#ec6a0c; --orange-l:#ff8a33;
+  --bg:#f6f8fc; --white:#fff; --text:#1d2742; --muted:#5d6785;
+  --shadow:0 10px 30px rgba(12,31,92,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--white);line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin-inline:auto}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.04em;font-weight:400;line-height:1.05}
+.tag{display:inline-block;color:var(--orange);font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.6rem}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 3rem}
+.sec-head h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--navy)}
+.sec-head p{color:var(--muted);margin-top:.6rem}
+section{padding:5rem 0}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.7rem;border-radius:999px;font-weight:600;border:2px solid transparent;transition:.25s;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-o{background:var(--orange);color:#fff;box-shadow:0 8px 20px rgba(236,106,12,.35)}
+.btn-o:hover{background:var(--orange-l);transform:translateY(-2px)}
+.btn-w{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-w:hover{background:#fff;color:var(--navy)}
+
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(12,31,92,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{height:54px;width:54px;object-fit:contain}
+.brand b{font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:.05em;color:var(--navy);line-height:1}
+.brand b span{color:var(--orange)}
+.menu{display:flex;align-items:center;gap:1.5rem;list-style:none}
+.menu a{font-weight:600;font-size:.95rem;color:var(--navy);position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--orange);transition:.25s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:.55rem 1.3rem;color:#fff}
+.burger{display:none;background:none;border:0;font-size:1.8rem;color:var(--navy);cursor:pointer}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy-d),var(--navy) 60%,#16348a);color:#fff;position:relative;overflow:hidden;padding:5.5rem 0 6.5rem}
+.hero::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(236,106,12,.35),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;position:relative}
+.hero h1{font-size:clamp(3rem,8vw,6rem);margin:.4rem 0 1rem}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lead{font-size:1.1rem;color:#cfd7f2;max-width:520px;margin-bottom:2rem}
+.cta{display:flex;flex-wrap:wrap;gap:1rem}
+.stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3rem}
+.stats div b{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--orange);display:block;line-height:1}
+.stats div span{font-size:.85rem;color:#b9c4ea}
+.hero-card{background:#fff;border-radius:28px;padding:1.5rem;box-shadow:0 25px 60px rgba(0,0,0,.35);transform:rotate(2deg);max-width:380px;margin-left:auto}
+.hero-card img{border-radius:18px}
+.road{position:absolute;left:0;right:0;bottom:0;height:22px;background:#0a1a4d;border-top:4px solid var(--orange)}
+.road::after{content:"";position:absolute;left:0;right:0;top:7px;height:4px;background:repeating-linear-gradient(90deg,#fff 0 40px,transparent 40px 80px);animation:drive 2.5s linear infinite}
+@keyframes drive{to{background-position:-80px 0}}
+.truck{position:absolute;left:0;bottom:calc(100% - 7px);width:110px;height:auto;animation:ride 11s linear infinite;z-index:2}
+.truck .body{animation:bump .5s ease-in-out infinite alternate;transform-origin:center}
+@keyframes ride{from{transform:translateX(-140px)}to{transform:translateX(100vw)}}
+@keyframes bump{to{transform:translateY(-1.5px)}}
+@media(max-width:520px){.truck{width:80px}}
+
+/* ABOUT */
+.about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.about h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--navy);margin-bottom:1rem}
+.about p{color:var(--muted);margin-bottom:1rem}
+.checks{list-style:none;margin-top:1.2rem;display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.checks li{font-weight:600;color:var(--navy);font-size:.95rem}
+.checks li::before{content:"✔";color:var(--orange);margin-right:.5rem}
+.about-box{background:var(--navy);color:#fff;border-radius:24px;padding:2.5rem;position:relative;box-shadow:var(--shadow)}
+.about-box::before{content:"";position:absolute;inset:12px;border:2px dashed rgba(236,106,12,.6);border-radius:16px;pointer-events:none}
+.about-box h3{font-size:2rem;color:var(--orange);margin-bottom:.8rem}
+.about-box p{color:#cfd7f2;margin:0}
+.about-box .quote{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;letter-spacing:.05em;margin-top:1.2rem;color:#fff}
+
+/* SERVICES */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+.card{background:#fff;border-radius:20px;padding:2rem 1.7rem;box-shadow:var(--shadow);border-bottom:4px solid transparent;transition:.3s}
+.card:hover{transform:translateY(-8px);border-bottom-color:var(--orange)}
+.ico{width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,var(--navy),#1d3b9a);display:grid;place-items:center;font-size:1.6rem;margin-bottom:1.1rem}
+.card h3{font-size:1.6rem;color:var(--navy);margin-bottom:.4rem}
+.card p{color:var(--muted);font-size:.95rem}
+
+/* WHY */
+.why{background:var(--navy);color:#fff}
+.why .sec-head h2{color:#fff}.why .sec-head p{color:#b9c4ea}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
+.step{border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:1.8rem;background:rgba(255,255,255,.04)}
+.step b{font-family:'Bebas Neue',sans-serif;font-size:3rem;color:var(--orange);line-height:1}
+.step h3{font-size:1.5rem;margin:.3rem 0}
+.step p{color:#b9c4ea;font-size:.93rem}
+
+/* CONTACT */
+.info-item .i{font-size:1.5rem}
+.info-item h4{color:var(--navy);font-size:1rem}
+.info-item p,.info-item a{color:var(--muted);font-size:.95rem;display:block}
+.info-item a:hover{color:var(--orange)}
+
+.btn-n{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(12,31,92,.3)}
+.btn-n:hover{background:#1d3b9a;transform:translateY(-2px)}
+.act-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.act{border-radius:26px;padding:2.6rem 2rem;text-align:center;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;gap:.8rem}
+.act .big{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-size:2rem;background:var(--orange)}
+.act h3{font-size:2.4rem}
+.act p{max-width:340px;margin-bottom:.6rem}
+.act .btn{width:100%;max-width:320px;justify-content:center;font-size:1.05rem}
+.act.call{background:linear-gradient(135deg,var(--navy-d),var(--navy));color:#fff}
+.act.call p{color:#cfd7f2}
+.act.mail{background:#fff;border:2px solid var(--orange)}
+.act.mail h3{color:var(--navy)}
+.act.mail p{color:var(--muted)}
+.mail-id{color:var(--orange);font-weight:600;word-break:break-all}
+.info-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-top:1.6rem}
+.info-item{display:flex;gap:1rem;background:var(--bg);padding:1.2rem 1.3rem;border-radius:16px;border-left:4px solid var(--orange)}
+.sub{font-size:2.2rem;color:var(--navy);margin:3rem 0 1.2rem;text-align:center}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.fl{background:#fff;border-radius:18px;padding:1.4rem;display:flex;gap:1rem;align-items:flex-start;box-shadow:var(--shadow)}
+.fl b{flex:none;width:40px;height:40px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;font-weight:400}
+.fl p{color:var(--text);font-size:.95rem;margin:0}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem}
+.chips span{background:var(--bg);border:1.5px solid #dfe5f3;color:var(--navy);font-weight:600;padding:.8rem 1.3rem;border-radius:999px;transition:.25s}
+.chips span:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-3px)}
+.note{text-align:center;color:var(--muted);font-size:.85rem;margin-top:1.6rem}
+.commit{background:linear-gradient(135deg,var(--orange),#d95a00);color:#fff;text-align:center;padding:4.5rem 0}
+.commit .tag{color:#fff;opacity:.85}
+.commit h2{font-size:clamp(2.4rem,6vw,4rem);margin-bottom:1rem}
+.commit p{max-width:720px;margin:auto;font-size:1.05rem}
+/* CARD GRID: 3 per row, last row centered */
+.cards,.steps,.flow{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}
+.cards>*,.steps>*,.flow>*{flex:0 0 calc((100% - 3rem)/3);min-width:0}
+.card{display:flex;flex-direction:column}
+.card h3{font-size:1.55rem}
+.step{transition:.3s}.step:hover{background:rgba(255,255,255,.09);transform:translateY(-6px);border-color:var(--orange)}
+.fl{transition:.3s}.fl:hover{transform:translateY(-5px)}
+.fl p{line-height:1.55}
+@media(max-width:900px){.cards>*,.steps>*,.flow>*{flex-basis:calc((100% - 1.5rem)/2)}}
+@media(max-width:600px){.cards>*,.steps>*,.flow>*{flex-basis:100%}.sub{font-size:1.9rem}}
+/* FOOTER */
+footer{background:var(--navy-d);color:#b9c4ea;padding:3.5rem 0 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:2.5rem}
+footer h4{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.06em;margin-bottom:.8rem}
+footer ul{list-style:none;display:grid;gap:.45rem;font-size:.93rem}
+footer a:hover{color:var(--orange)}
+.f-brand{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem}
+.f-brand img{height:56px;width:56px;object-fit:contain;background:#fff;border-radius:12px;padding:4px}
+.f-brand b{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#fff;letter-spacing:.05em}
+.copy{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:1.2rem 0;font-size:.85rem}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.act-grid,.info-row,.f-grid{grid-template-columns:1fr}
+  .hero-card{margin:1rem auto 0;transform:none;max-width:300px}
+  .burger{display:block}
+  .menu{position:absolute;top:70px;left:0;right:0;background:#fff;flex-direction:column;padding:1.5rem 0;gap:1.2rem;box-shadow:0 12px 20px rgba(12,31,92,.1);display:none}
+  .menu.open{display:flex}
+  section{padding:3.8rem 0}
+}
+@media(max-width:520px){
+  .checks{grid-template-columns:1fr}
+  .brand b{font-size:1.15rem}
+  .stats{gap:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="brand">
+      <img src="logo.jpeg" alt="Shree Vinayaka Logistics logo">
+      <b>SHREE VINAYAKA <span>LOGISTICS</span></b>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <ul class="menu" id="menu" onclick="this.classList.remove('open')">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="btn btn-o">Get a Quote</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">Ahmedabad • Pan-India FTL Transportation</span>
+      <h1>Delivering <em>Trust</em>,<br>Driving Business</h1>
+      <p class="lead">Dependable Full Truck Load transportation from Ahmedabad across India. Timely vehicle placement, transparent communication and professional coordination for your business.</p>
+      <div class="cta">
+        <a href="tel:+918487041016" class="btn btn-o">📞 Call Now</a>
+        <a href="mailto:info@svlpl.com?subject=Truck%20Enquiry%20-%20Shree%20Vinayaka%20Logistics&body=Name%3A%0APhone%3A%0APickup%20City%3A%0ADrop%20City%3A%0ATruck%20Type%3A%0AMaterial%20%2F%20Weight%3A%0A" class="btn btn-w">✉️ Email Enquiry</a>
+      </div>
+      <div class="stats">
+        <div><b>FTL</b><span>Full Truck Load Specialist</span></div>
+        <div><b>Pan-India</b><span>Route Coverage</span></div>
+        <div><b>Market-Hire</b><span>Flexible Capacity</span></div>
+      </div>
+    </div>
+    <div class="hero-card"><img src="logo.jpeg" alt="Shree Vinayaka Logistics – Delivering Trust"></div>
+  </div>
+  <div class="road">
+    <svg class="truck" viewBox="0 0 120 56" aria-hidden="true">
+      <g class="body">
+        <rect x="2" y="6" width="72" height="34" rx="4" fill="#ec6a0c"/>
+        <text x="38" y="31" text-anchor="middle" font-family="Bebas Neue,Impact,sans-serif" font-size="22" letter-spacing="2" fill="#fff">SVL</text>
+        <path d="M78 14h20l16 16v10H78z" fill="#fff"/>
+        <path d="M84 19h12l9 10H84z" fill="#0c1f5c"/>
+        <rect x="2" y="40" width="112" height="5" rx="2" fill="#2a4bb5"/>
+      </g>
+      <g fill="#111" stroke="#fff" stroke-width="3">
+        <circle cx="22" cy="46" r="8.5"/><circle cx="50" cy="46" r="8.5"/><circle cx="98" cy="46" r="8.5"/>
+      </g>
+      <g fill="#ec6a0c"><circle cx="22" cy="46" r="3"/><circle cx="50" cy="46" r="3"/><circle cx="98" cy="46" r="3"/></g>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <span class="tag">Company Overview</span>
+      <h2>Your Trusted Partner in Transportation</h2>
+      <p>Shree Vinayaka Logistics (SVL) is a transportation company based in Ahmedabad, Gujarat, specializing in Full Truck Load (FTL) transportation solutions across India.</p>
+      <p>With a flexible market-hire transportation model, we help businesses move their goods efficiently without the complexity of managing their own fleet. Our aim is long-term partnerships with manufacturers, industrial businesses, distributors and corporate customers through consistent, dependable service.</p>
+      <ul class="checks">
+        <li>Timely Vehicle Placement</li><li>Transparent Communication</li>
+        <li>Professional Coordination</li><li>Customer Satisfaction</li>
+      </ul>
+    </div>
+    <div class="about-box">
+      <h3>Our Vision</h3>
+      <p>To become a trusted and preferred Full Truck Load transportation partner for businesses across India through service excellence, operational efficiency and long-term customer relationships.</p>
+      <div class="quote">“Delivering Trust with Every Load”</div>
+    </div>
+  </div>
+  <div class="container mission">
+    <h3 class="sub">Our Mission</h3>
+    <div class="flow">
+      <div class="fl"><b>✔</b><p>Provide reliable and efficient FTL transportation solutions.</p></div>
+      <div class="fl"><b>✔</b><p>Ensure timely vehicle placement and effective shipment coordination.</p></div>
+      <div class="fl"><b>✔</b><p>Maintain transparent communication throughout the transportation process.</p></div>
+      <div class="fl"><b>✔</b><p>Develop long-term partnerships with corporate customers.</p></div>
+      <div class="fl"><b>✔</b><p>Continuously improve service quality, operational processes and customer satisfaction.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">Our Core Services</span>
+      <h2>Transportation Solutions</h2>
+      <p>Full Truck Load services built around your cargo, route and delivery schedule.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="ico">🚚</div><h3>Full Truck Load (FTL)</h3><p>Dedicated truck transportation for bulk shipments and full-load consignments.</p></article>
+      <article class="card"><div class="ico">🏗️</div><h3>ODC Consignment &amp; Project Cargo</h3><p>Over Dimensional Cargo (ODC) consignments and big, heavy project cargo, subject to vehicle availability.</p></article>
+      <article class="card"><div class="ico">🗺️</div><h3>Pan-India Transportation</h3><p>Transportation solutions connecting Ahmedabad and other business locations across India, subject to lane and vehicle availability.</p></article>
+      <article class="card"><div class="ico">🔁</div><h3>Market-Hire Vehicle Placement</h3><p>Flexible sourcing and placement of suitable commercial vehicles as per cargo specifications and delivery schedules.</p></article>
+      <article class="card"><div class="ico">🏢</div><h3>Corporate Transportation</h3><p>Customized support for manufacturers, industrial units and distributors needing regular full-load movement.</p></article>
+      <article class="card"><div class="ico">📍</div><h3>Shipment Coordination &amp; Follow-up</h3><p>Proactive coordination with customers, drivers and transport partners for smooth movement and timely delivery.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">Why Choose Us</span>
+      <h2>Why Shree Vinayaka Logistics?</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Reliable Service</h3><p>A strong focus on dependable transportation and customer commitments.</p></div>
+      <div class="step"><b>02</b><h3>Flexible Capacity</h3><p>Market-hire vehicle sourcing to support changing transportation requirements.</p></div>
+      <div class="step"><b>03</b><h3>Customer-Centric</h3><p>Responsive communication and practical solutions for customers.</p></div>
+      <div class="step"><b>04</b><h3>Pan-India Focus</h3><p>Transportation support for business movements across India.</p></div>
+      <div class="step"><b>05</b><h3>Operational Coordination</h3><p>Focused follow-up on vehicle placement, transit and delivery.</p></div>
+      <div class="step"><b>06</b><h3>Long-Term Partnerships</h3><p>A commitment to trust, transparency and mutually beneficial relationships.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">Industries</span>
+      <h2>Industries We Aim to Serve</h2>
+      <p>Our FTL transportation solutions are suited to businesses such as:</p>
+    </div>
+    <div class="chips">
+      <span>🏭 Manufacturing &amp; Industrial</span><span>⚙️ Engineering &amp; Machinery</span>
+      <span>🛒 FMCG &amp; Consumer Goods</span><span>📦 Packaging &amp; Paper</span>
+      <span>🧵 Textile &amp; Garment</span><span>🧪 Chemical &amp; Industrial Material*</span>
+      <span>🏬 Wholesalers &amp; Distribution</span>
+    </div>
+    <p class="note">*Specific services are offered according to cargo requirements, applicable regulations, route availability and vehicle suitability.</p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="about" id="approach">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">Our Operating Approach</span>
+      <h2>More Than Just Arranging a Truck</h2>
+      <p>Effective transportation requires planning, coordination, accountability and consistent communication.</p>
+    </div>
+    <div class="flow">
+      <div class="fl"><b>1</b><p>Understanding the customer's route, cargo and delivery requirements.</p></div>
+      <div class="fl"><b>2</b><p>Coordinating suitable vehicle placement.</p></div>
+      <div class="fl"><b>3</b><p>Communicating loading and dispatch details.</p></div>
+      <div class="fl"><b>4</b><p>Following up on shipment movement and delivery.</p></div>
+      <div class="fl"><b>5</b><p>Coordinating proof of delivery and documentation.</p></div>
+      <div class="fl"><b>6</b><p>Maintaining professional communication and supporting timely issue resolution.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITMENT -->
+<section class="commit">
+  <div class="container">
+    <span class="tag">Our Commitment</span>
+    <h2>Delivering Trust with Every Load</h2>
+    <p>Transportation is an important part of our customers' supply chains. We aim to make every movement more dependable through responsible coordination, transparent communication and a commitment to service quality.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <span class="tag">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p>Need a truck? Call or email us directly and we will get back to you quickly.</p>
+    </div>
+    <div class="act-grid">
+      <div class="act call">
+        <div class="big">📞</div>
+        <h3>Call Us Directly</h3>
+        <p>Tap a number to speak with us for truck booking and rates.</p>
+        <a class="btn btn-o" href="tel:+918487041016">+91 84870 41016</a>
+        <a class="btn btn-w" href="tel:+919429670671">+91 94296 70671</a>
+        <a class="btn btn-w" href="tel:+918401337389">+91 84013 37389</a>
+        <a class="btn btn-w" href="tel:+919889511803">+91 98895 11803</a>
+      </div>
+      <div class="act mail">
+        <div class="big">✉️</div>
+        <h3>Email Your Enquiry</h3>
+        <p>Share pickup, drop and material details. We will reply quickly with the best rate.</p>
+        <a class="btn btn-n" href="mailto:info@svlpl.com?subject=Truck%20Enquiry%20-%20Shree%20Vinayaka%20Logistics&body=Name%3A%0APhone%3A%0APickup%20City%3A%0ADrop%20City%3A%0ATruck%20Type%3A%0AMaterial%20%2F%20Weight%3A%0A">Send Email Now</a>
+        <a class="mail-id" href="mailto:info@svlpl.com">info@svlpl.com</a>
+      </div>
+    </div>
+    <div class="info-row">
+      <div class="info-item"><span class="i">📍</span><div><h4>Registered Office Address</h4>
+        <p>B-212, Bijal Business Centre, Nr. Aslali Highway,<br>Opp. Shyam Icon, Aslali, Ahmedabad – 382330, Gujarat, India</p></div></div>
+      <div class="info-item"><span class="i">🚛</span><div><h4>Service Coverage</h4>
+        <p>Ahmedabad to Pan India, subject to route and vehicle availability.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container f-grid">
+    <div>
+      <div class="f-brand"><img src="logo.jpeg" alt="SVL logo"><b>SHREE VINAYAKA LOGISTICS</b></div>
+      <p>Full Truck Load – Delivering Trust.<br>Your Trusted Partner in Transportation.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li>
+      <li><a href="#industries">Industries</a></li><li><a href="#industries">Industries</a></li><li><a href="#contact">Contact</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li><a href="tel:+918487041016">+91 84870 41016</a></li><li><a href="tel:+919429670671">+91 94296 70671</a></li><li><a href="tel:+918401337389">+91 84013 37389</a></li><li><a href="tel:+919889511803">+91 98895 11803</a></li><li><a href="mailto:info@svlpl.com">info@svlpl.com</a></li><li><b>Reg. Office:</b> B-212, Bijal Business Centre, Nr. Aslali Highway, Opp. Shyam Icon, Aslali, Ahmedabad – 382330, Gujarat, India</li></ul>
+    </div>
+  </div>
+  <div class="copy">© <span id="yr">2026</span> Shree Vinayaka Logistics. All rights reserved.</div>
+</footer>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
